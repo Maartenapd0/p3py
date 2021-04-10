@@ -3,6 +3,7 @@ import tkinter as tk
 #beeld
 window = tk.Tk()
 window.title('Bereken hoe lang u onderweg bent')
+window.geometry("300x300")
 
 #vraag afstand
 label_out = tk.Label(window, text='Wat is de afstand?(in km)')
@@ -31,9 +32,8 @@ btn_sumbit.pack()
 #event handler
 def handle_submit(event):
     print('knop ingedrukt')
-    
     try:
-        afstand = int(entry1.get()) / int(entry.get())
+        afstand = float(entry1.get()) / float(entry.get())
         print(afstand)
         label_out['text'] = 'Je doet er ' + str(afstand) + ' uur over.'
     except:
