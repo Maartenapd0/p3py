@@ -3,6 +3,7 @@ import tkinter as tk
 #beeld
 window = tk.Tk()
 window.title('Bereken hoe lang u onderweg bent')
+window.geometry("300x300")
 
 #vraag afstand
 label_out = tk.Label(window, text='Wat is de afstand?(in km)')
@@ -11,8 +12,8 @@ label_out.pack()
 label = tk.Label(window, text='Afstand:')
 label.pack()
     #invul beeld
-entry = tk.Entry(master=window, width=10)
-entry.pack()
+entry1 = tk.Entry(master=window, width=10)
+entry1.pack()
 
 #vraag snelheid
 label_out = tk.Label(window, text='Wat is de snelheid?(in uur)')
@@ -28,5 +29,17 @@ entry.pack()
 btn_sumbit = tk.Button(master=window, text='Submit')
 btn_sumbit.pack()
 
-#applicatie starten haalll
+#event handler
+def handle_submit(event):
+    print('knop ingedrukt')
+    try:
+        afstand = float(entry1.get()) / float(entry.get())
+        print(afstand)
+        label_out['text'] = 'Je doet er ' + str(afstand) + ' uur over.'
+    except:
+         label_out['text'] = 'Vul gegevens in.'
+
+btn_sumbit.bind('<Button-1>', handle_submit)
+
+#applicatie starten 
 window.mainloop()
