@@ -11,7 +11,7 @@ label_out.pack()
 label = tk.Label(window, text='Afstand:')
 label.pack()
     #invul beeld
-entry = tk.Entry(master=window, width=10)
+entry1 = tk.Entry(master=window, width=10)
 entry.pack()
 
 #vraag snelheid
@@ -27,6 +27,19 @@ entry.pack()
 #submit knop
 btn_sumbit = tk.Button(master=window, text='Submit')
 btn_sumbit.pack()
+
+#event handler
+def handle_submit(event):
+    print('knop ingedrukt')
+    print(entry.get())
+    try:
+        afstand = int(entry1.get()) / int(entry.get())
+        print(afstand)
+        label_out['text'] = 'Je doet er ' + str(afstand) + '.'
+    #except:
+     #   label_out['text'] = 'Vul een jaartal in'
+
+btn_sumbit.bind('<Button-1>', handle_submit)
 
 #applicatie starten 
 window.mainloop()
