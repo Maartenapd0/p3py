@@ -6,28 +6,37 @@ window.title('Bereken hoe lang u onderweg bent')
 window.geometry("300x300")
 
 #vraag afstand
-label_out = tk.Label(window, text='Wat is de afstand?(in km)')
-label_out.pack()
+label_out1 = tk.Label(window, text='Wat is de afstand?(in km)')
+        
     # antwoord afstand
-label = tk.Label(window, text='Afstand:')
-label.pack()
+label1 = tk.Label(window, text='Afstand:')
+        
     #invul beeld
 entry1 = tk.Entry(master=window, width=10)
-entry1.pack()
+        
 
 #vraag snelheid
 label_out = tk.Label(window, text='Wat is de snelheid?(in uur)')
-label_out.pack()
+        
     # antwoord snelheid
 label = tk.Label(window, text='Snelheid:')
-label.pack()
+        
     #invul beeld
 entry = tk.Entry(master=window, width=10)
-entry.pack()
+        
 
 #submit knop
 btn_sumbit = tk.Button(master=window, text='Submit')
-btn_sumbit.pack()
+        
+# grid
+
+label_out1.grid(row=1, column=0, sticky="w")
+label1.grid(row=2, column=0, sticky="w")
+entry1.grid(row=2, column=1, sticky="e")
+label_out.grid(row=4, column=0, sticky="w")
+label.grid(row=5, column=0, sticky="w")
+entry.grid(row=5, column=1, sticky="e")
+btn_sumbit.grid(row=7, column=1, sticky='w')
 
 #event handler
 def handle_submit(event):
