@@ -1,6 +1,6 @@
 import tkinter as tk
 
-#beeld
+#beeld 
 window = tk.Tk()
 window.title('Bereken hoe lang u onderweg bent')
 
