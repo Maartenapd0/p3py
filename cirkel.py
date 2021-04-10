@@ -4,7 +4,7 @@ window = tk.Tk()
 window.title = ("Cirkel berekenen")
 window.geometry("300x300")
 
-label_main = tk.Label(window, text="wat is de diameter van de cirkel? in cm!") 
+label_main = tk.Label(window, text="wat is de diameter van de cirkel? in cm! (. geen ,)") 
 label_cirkel = tk.Label(text="Diameter: ")
 entry_cirkel = tk.Entry(master=window)
 
