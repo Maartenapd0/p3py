@@ -2,7 +2,7 @@ from tkinter import *
 import random
 window = Tk()
 
-window.geometry ("300x300")
+window.geometry ("200x300")
 
 andwoord = Label(window, text="")
 
