@@ -1,4 +1,4 @@
 # p3py
-eind opdracht programeren 
+eind opdracht programeren
 
-W
+W 2
