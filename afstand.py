@@ -28,5 +28,5 @@ entry.pack()
 btn_sumbit = tk.Button(master=window, text='Submit')
 btn_sumbit.pack()
 
-#applicatie starten haalll
+#applicatie starten 
 window.mainloop()
