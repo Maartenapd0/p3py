@@ -48,3 +48,5 @@ button2 = Button(window, text="wis", command= Clear)
 button2.grid(column=1, row=5)
 #main-loop
 window.mainloop()
+
+#Maarten van Assenbergh id=172842
