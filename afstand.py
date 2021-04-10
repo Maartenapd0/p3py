@@ -1,6 +1,6 @@
 import tkinter as tk
 
-#beeld
+#beeld 
 window = tk.Tk()
 window.title('Bereken hoe lang u onderweg bent')
 
@@ -30,3 +30,5 @@ btn_sumbit.pack()
 
 #applicatie starten haalll
 window.mainloop()
+
+# Floor Deuss 
