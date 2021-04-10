@@ -7,29 +7,22 @@ window.geometry("300x300")
 
 #vraag afstand
 label_out1 = tk.Label(window, text='Wat is de afstand?(in km)')
-        
     # antwoord afstand
 label1 = tk.Label(window, text='Afstand:')
-        
     #invul beeld
 entry1 = tk.Entry(master=window, width=10)
         
-
 #vraag snelheid
-label_out = tk.Label(window, text='Wat is de snelheid?(in uur)')
-        
+label_out = tk.Label(window, text='Wat is de snelheid?(in uur)')  
     # antwoord snelheid
 label = tk.Label(window, text='Snelheid:')
-        
     #invul beeld
 entry = tk.Entry(master=window, width=10)
         
-
 #submit knop
 btn_sumbit = tk.Button(master=window, text='Submit')
         
 # grid
-
 label_out1.grid(row=1, column=0, sticky="w")
 label1.grid(row=2, column=0, sticky="w")
 entry1.grid(row=2, column=1, sticky="e")
