@@ -11,6 +11,7 @@ window.geometry("300x300")
 bedrag = Label(window, text="bedrag")
 hooglaag = Label(window, text="selecteer hoog of laag btw")
 antwoord = Label(window, text="")
+resultaat = Label(window, text="bedrag =")
 #inputs
 bedragInvoer = Entry(window,width=5)
 hoogLaaginvoer = OptionMenu(window, variable, "hoog btw", "laag btw")
@@ -21,21 +22,22 @@ bedragInvoer.grid(column=1,row=0)
 hooglaag.grid(column=0,row=1)
 hoogLaaginvoer.grid(column=1,row=1)
 
-antwoord.grid(column=0,row=2)
+antwoord.grid(column=1,row=2)
+bedrag.grid(column=0, row=2)
 #functie
 def Clear():
     bedragInvoer.delete(0, "end")
 def btw():
     if variable.get() == "hoog btw":
-        bedrag = float(bedragInvoer.get()/100*121)
-        return bedrag
+        bedrag = float(bedragInvoer.get())/100*121
+        antwoord.configure(text= bedrag)
     elif variable.get() == "laag btw":
-        bedrag = float(bedragInvoer.get()/100*109)
-        return bedrag
+        bedrag = float(bedragInvoer.get())/100*109
+        antwoord.configure(text= bedrag)
     else:
         bedrag = "voer hoog of laag btw in"
-        return bedrag
-    antwoord.configure(text= bedrag)
+        antwoord.configure(text= bedrag)
+
 
 
 #buttons
