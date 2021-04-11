@@ -48,6 +48,7 @@ def handle_submit(event):
 #function voor de clear
 def handle_clear(event):
     entry_cirkel.delete(0, "end")
+    label_fout["text"] = "..."
 
 #buttons
 btn_submit.bind("<Button-1>", handle_submit)
