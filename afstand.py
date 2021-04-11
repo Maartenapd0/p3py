@@ -28,5 +28,17 @@ entry.pack()
 btn_sumbit = tk.Button(master=window, text='Submit')
 btn_sumbit.pack()
 
+#event handler
+def handle_submit(event):
+    print('knop ingedrukt')
+    print(entry.get())
+    try:
+        tijd = float(entry1.get) / float(entry.get())
+        print(tijd)
+        label_out['text'] = 'Je doet er ' + str(tijd) + ' uur over.'
+    except:
+        label_out['text'] = 'Vul alle gegevens in'
+
+btn_sumbit.bind('<Button-1>', handle_submit)
 #applicatie starten haalll
 window.mainloop()
