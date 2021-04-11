@@ -2,31 +2,34 @@ import tkinter as tk
 
 #beeld 
 window = tk.Tk()
-window.title('Bereken hoe lang u onderweg bent')
+window.title('Hoelang onderweg')
+window.geometry("300x300")
 
 #vraag afstand
 label_out = tk.Label(window, text='Wat is de afstand?(in km)')
-label_out.pack()
     # antwoord afstand
 label = tk.Label(window, text='Afstand:')
-label.pack()
     #invul beeld
 entry = tk.Entry(master=window, width=10)
-entry.pack()
 
 #vraag snelheid
-label_out = tk.Label(window, text='Wat is de snelheid?(in uur)')
-label_out.pack()
+label_out1 = tk.Label(window, text='Wat is de snelheid?(in uur)')
     # antwoord snelheid
-label = tk.Label(window, text='Snelheid:')
-label.pack()
+label1 = tk.Label(window, text='Snelheid:')
     #invul beeld
-entry = tk.Entry(master=window, width=10)
-entry.pack()
+entry1 = tk.Entry(master=window, width=10)
 
 #submit knop
 btn_sumbit = tk.Button(master=window, text='Submit')
-btn_sumbit.pack()
+
+#grid
+label_out.grid(row=1, column=0, sticky="w")
+label.grid(row=2, column=0, sticky="w")
+entry.grid(row=2, column=0, sticky="e")
+label_out1.grid(row=3, column=0, sticky="w")
+label1.grid(row=4, column=0, sticky="w")
+entry1.grid(row=4, column=0, sticky="e")
+btn_sumbit.grid(row=5, column=0, sticky="w")
 
 #event handler
 def handle_submit(event):
@@ -40,5 +43,8 @@ def handle_submit(event):
         label_out['text'] = 'Vul alle gegevens in'
 
 btn_sumbit.bind('<Button-1>', handle_submit)
-#applicatie starten haalll
+
+#applicatie starten 
 window.mainloop()
+
+#Floor Deuss
