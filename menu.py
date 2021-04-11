@@ -2,7 +2,7 @@ from tkinter import *
 
 #beeld
 window = Tk()
-window.title('menu beeld')
+window.title('start menu')
 window.geometry("300x300")
 
 #functies 
