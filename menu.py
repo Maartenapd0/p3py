@@ -5,7 +5,7 @@ import os
 #beeld
 window = Tk()
 window.title('start menu')
-window.geometry("300x300")
+window.geometry("200x300")
 
 #files
 
