@@ -2,27 +2,19 @@ from tkinter import *
 import random
 window = Tk()
 
-window.geometry ("300x300")
+window.geometry ("200x300")
 
-andwoord = Label(window, text="")
-andwoord.grid(column = 1, row = 2)
-
+antwoord = Label(window, text="")
 
 def show():
     getal = random.randint(0, 6)
-    ruimte = Label(window, text=getal)
-    andwoord.configure(text=getal)
-
+    antwoord.configure(text=getal)
 
 label = Label()
-btn_submit = Button(master=window, text="dobbel", command = show) 
-btn_submit.grid(column = 1, row = 1)
-
-
-def dobbelen(event):
-    print(getal)
-
-
+btn_submit = Button(window, text="dobbel", command = show) 
+#grid
+antwoord.grid(column=0,row=0)
+btn_submit.grid(column=0,row=1)
 
 
 window.mainloop()
