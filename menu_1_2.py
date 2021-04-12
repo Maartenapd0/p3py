@@ -8,13 +8,11 @@ window.geometry("300x300")
 
 def afstand():
     import afstand
-
 def btw():
     import btw
 
 def cirkel():
-    import cirkel
-
+    import Cirkel
 def dobbel():
     import dobbel
 
